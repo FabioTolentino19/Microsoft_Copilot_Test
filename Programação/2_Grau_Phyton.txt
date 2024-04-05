@@ -1,0 +1,43 @@
+Pergunta: Gerar codigo em Phyton para resolver equação de segundo grau
+
+Resposta:
+
+Claro! Vou gerar um código em Python para resolver uma equação do segundo grau. A equação do segundo grau é dada por:
+
+ax2+bx+c=0
+
+Aqui está um exemplo de código que calcula as raízes de uma equação do segundo grau, considerando os valores de a, b e c fornecidos pelo usuário:
+
+
+from math import sqrt
+
+def testandoNum(numero):
+    while True:
+        try:
+            n = float(input(numero))
+        except (ValueError, TypeError):
+            print("Você não digitou um número válido.")
+            continue
+        else:
+            return n
+
+def segGrau(a, b, c):
+    delta = b**2 - 4 * a * c
+
+    if delta < 0:
+        print("Delta é negativo, logo x não pertence aos números reais!")
+    else:
+        x1 = (-b + sqrt(delta)) / (2*a)
+        x2 = (-b - sqrt(delta)) / (2*a)
+        print(f"O valor de x1 é: {x1}, e o valor de x2 é: {x2}")
+
+# Solicita os valores de a, b e c ao usuário
+num1 = testandoNum("Digite o valor de a: ")
+num2 = testandoNum("Digite o valor de b: ")
+num3 = testandoNum("Digite o valor de c: ")
+
+# Calcula as raízes da equação do segundo grau
+segGrau(num1, num2, num3)
+
+Você pode testar o código no compilador online [aqui](https://www.onlinegdb.com/online_python_compiler).
+Espero que isso ajude! Se tiver mais alguma dúvida, fique à vontade para perguntar. 😊
